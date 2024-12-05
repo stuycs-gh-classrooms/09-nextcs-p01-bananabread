@@ -2,8 +2,14 @@ class Ball {
   int bally;
   int ballx;
   int ballsize;
-  int xspeed;
-  int yspeed;
+  int xspeed = 5;
+  int yspeed = 5;
+  
+  Ball(int ballx, int bally, int ballsize) {
+    this.ballx = ballx;
+    this.bally = bally;
+    this.ballsize = ballsize;
+  }
   
   void move() {
   if (ballx >= width - ballsize/2 ||
@@ -15,4 +21,8 @@ class Ball {
   ballx+= xspeed;
   bally+= yspeed;
     }//move
+    void display() {
+      fill(255);
+      circle(ballx, bally, ballsize); 
+    }
 }
