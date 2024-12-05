@@ -21,6 +21,7 @@ class Ball {
   ballx+= xspeed;
   bally+= yspeed;
     }//move
+    
     void display() {
       fill(255);
       circle(ballx, bally, ballsize); 
