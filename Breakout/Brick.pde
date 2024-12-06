@@ -13,4 +13,5 @@ class Brick {
     this.brickheight = brickheight;
     this.health = health;
   }
+  
 }
