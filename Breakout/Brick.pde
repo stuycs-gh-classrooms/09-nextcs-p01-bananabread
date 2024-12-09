@@ -23,7 +23,7 @@ class Brick {
     PVector start = pos.copy();
     for (int r = 0; r < bricks.length; r++) {
       for (int c = 0; c < bricks[r].length; c++) {
-        bricks[r][c] = new Ball(start, brickSize);
+        bricks[r][c] = new Brick(start, brickSize);
         start.x+= brickSize;
       }
       start.y+= brickSize;
@@ -34,4 +34,5 @@ class Brick {
       for (int c = 0; c < bricks[r].length; c++) {
         bricks[r][c] = new Brick(pos, brickSize);
       }
+    }
 }
