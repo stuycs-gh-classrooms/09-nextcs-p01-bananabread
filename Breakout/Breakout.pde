@@ -1,4 +1,4 @@
-Brick[][] bricks;
+Brick bricks;
 Platform platform;
 Ball ball;
 int rows = 5;
@@ -9,8 +9,6 @@ void setup() {
   size(600,400);
   ball = new Ball(300, 300, 10);
   platform = new Platform(300, 380, 50, 10);
-  bricks = new Brick[rows][cols];
-  brickgrid(bricks);
 }
 
 void draw() {
