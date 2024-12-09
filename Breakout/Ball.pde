@@ -1,14 +1,12 @@
 class Ball {
-  int bally;
-  int ballx;
-  int ballsize;
-  int xspeed = 5;
-  int yspeed = 5;
+  Pvector center;
+  float ballsize;
+  float xspeed = 5;
+  float yspeed = -5;
   
-  Ball(int ballx, int bally, int ballsize) {
-    this.ballx = ballx;
-    this.bally = bally;
-    this.ballsize = ballsize;
+  Ball(PVector p, float size) {
+    center = new PVector(p.x, p.y);
+    ballsize = size;
   }
   
   void move() {
@@ -20,7 +18,17 @@ class Ball {
       { yspeed*= -1; }
   ballx+= xspeed;
   bally+= yspeed;
-    }//move
+}//move
+
+boolean collisionCheck(Ball other) {
+  return (this.center.dist(other.center) <= (this.ballsize
+
+  void PlatformCollision(Platform Platform) {
+      if ( ballx > platform.platx - platform.platwidth/2
+      && ballx < platform.platx + platform.platwidth/2 
+      && bally > platform.platy - ballsize/2)
+    { yspeed *= -1; }
+  }
     
     void display() {
       fill(255);

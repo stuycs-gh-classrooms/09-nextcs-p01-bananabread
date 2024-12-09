@@ -1,17 +1,23 @@
 class Brick {
-  int x;
-  int y;
-  int brickwidth;
-  int brickheight;
-  int health;
-  int brickcolor;
+  float brickx;
+  float bricky;
+  float brickwidth;
+  float brickheight;
+  float health;//will use to make bricks have more lives
+  int brickcolor;//will use to show health for bricks 
+  boolean status;
   
-  Brick (int x, int y, int brickwidth, int brickheight, int health) {
-    this.x = x;
-    this.y = y;
-    this.brickwidth = brickwidth;
-    this.brickheight = brickheight;
-    this.health = health;
+  Brick (float x, float y, float brickwidth, float brickheight, float health) {
+    brickx = x;
+    bricky = y;
+    brickwidth = width / cols;
+    brickheight = height;
+    health = health;
   }
   
+  void display() {
+    fill(255,0,0);
+    if (status) 
+    { rect(brickx, bricky, brickwidth, brickheight); }
+  } 
 }
