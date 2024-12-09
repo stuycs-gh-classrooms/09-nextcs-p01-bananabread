@@ -1,22 +1,20 @@
 class Platform{
-  float platx;
-  float platy;
+  PVector center;
   float platwidth;
   float platheight;
   
-  Platform (float x, float y, float w, float h) {
-    platx = x;
-    platy = y;
+  Platform (float w, float h) {
     platwidth = w;
     platheight = h;
+    center = new PVector(width / 2, 380);
   }
   
   void move() {
     if (platx > 0 || platx + width < 800)
-   { platx = mouseX; }
+   { center.x = mouseX; }
   }
   
   void display() {
-    rect(platx, platy, platwidth, platheight);
+    rect(center.x, center.y, platheight);
   }
 }

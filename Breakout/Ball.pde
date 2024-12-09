@@ -1,5 +1,5 @@
 class Ball {
-  Pvector pos;
+  PVector pos;
   float ballsize;
   float xspeed = 5;
   float yspeed = -5;
