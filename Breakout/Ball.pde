@@ -1,12 +1,15 @@
 class Ball {
   PVector pos;
   float ballsize;
-  float xspeed = 5;
-  float yspeed = -5;
+  float xspeed;
+  float yspeed;
+  color B;
 
   Ball(PVector p, float size) {
     pos = new PVector(p.x, p.y);
     ballsize = size;
+    xspeed = 5;
+    yspeed = -5;
   }
 
   void move() {

@@ -10,7 +10,7 @@ class Platform {
   }
 
   void move() {
-    if (platx > 0 || platx + width < 800)
+    if (center.x > 0 || center.x + width < 800)
     {
       center.x = mouseX;
     }

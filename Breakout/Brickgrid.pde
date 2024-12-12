@@ -1,5 +1,4 @@
 
-class Brickgrid {
   Brick[][] bricks;
   PVector pos;
   int brickSize;
@@ -49,7 +48,7 @@ class Brickgrid {
     for (int r = 0; r < bricks.length; r++) {
       for (int c = 0; c < bricks[r].length; c++) {
         if (bricks[r][c] != null
-          && Brick.collisionCheck(bricks[r][c]))
+          && ball.collisionCheck(bricks[r][c]))
         {
           bricks[r][c] = null;
           hit = true;
@@ -58,4 +57,3 @@ class Brickgrid {
     }
     return hit;
   }
-}
