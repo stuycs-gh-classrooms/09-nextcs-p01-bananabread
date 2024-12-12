@@ -1,5 +1,5 @@
 
-class Brickgrid {  
+class Brickgrid {
   Brick[][] bricks;
   PVector pos;
   int brickSize;
@@ -8,9 +8,9 @@ class Brickgrid {
   float brickwidth;
   float brickheight;
   float health;//will use to make bricks have more lives
-  int brickcolor;//will use to show health for bricks 
+  int brickcolor;//will use to show health for bricks
   boolean status;
-  
+
   Brickgrid(int rows, int cols, int bsize) {
     bricks = new Brick[rows][cols];
     brickSize = bsize;
@@ -20,7 +20,7 @@ class Brickgrid {
     makeBricks();
     health = 1;
   }
-  
+
   void makeBricks() {
     PVector start = pos.copy();
     for (int r = 0; r < bricks.length; r++) {
@@ -32,28 +32,30 @@ class Brickgrid {
       start.x = pos.x;
     }
   }
-  
+
   void display() {
     for (int r = 0; r < bricks.length; r++) {
       for (int c = 0; c < bricks[r].length; c++) {
         if (bricks[r][c] != null)
-        { bricks[r][c].display(); }
+        {
+          bricks[r][c].display();
+        }
+      }
     }
   }
-  }
-  
+
   boolean processCollisions(Ball ball) {
     boolean hit = false;
     for (int r = 0; r < bricks.length; r++) {
       for (int c = 0; c < bricks[r].length; c++) {
-        if (bricks[r][c] != null 
-        && Brick.collisionCheck(bricks[r][c]))
-        { bricks[r][c] = null;
-        hit = true;
+        if (bricks[r][c] != null
+          && Brick.collisionCheck(bricks[r][c]))
+        {
+          bricks[r][c] = null;
+          hit = true;
         }
       }
     }
     return hit;
   }
-    
 }
